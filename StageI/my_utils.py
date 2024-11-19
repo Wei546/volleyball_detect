@@ -185,7 +185,6 @@ class RoboYOLO:
         elif self.name == 'yolov7':
             img = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
             im_pil = PIL.Image.fromarray(img)
-
             pred = self.model(im_pil)
             return pred
 
