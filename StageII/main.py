@@ -100,5 +100,5 @@ class VolleyPlayerDetector:
             raise ValueError(
                 "Invalid input format. Please provide either an image or a video file.")
 
-test = VolleyPlayerDetector(weight_path='C://Users//s6324//Desktop//volleyball_detect//StageII//players//yV8_medium//weights//best.pt',input_path='C://Users//s6324//Desktop//volleyball_detect//StageII//assets//ballGame.mp4',output_path='C://Users//s6324//Desktop//volleyball_detect//StageII//Output//TrackVideo.mp4',show_conf=True,show_labels=False,conf=0.25,max_det=100,classes=None,line_width=3,font_size=3)
+test = VolleyPlayerDetector(weight_path='./actions/yV8_medium/weights/best.pt',input_path='./assets/ballGame.mp4',output_path='./Output/TrackVideo.mp4',show_conf=True,show_labels=False,conf=0.25,max_det=100,classes=None,line_width=3,font_size=3)
 test.playerDetect()

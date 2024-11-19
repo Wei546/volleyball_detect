@@ -109,8 +109,8 @@ def process_court(api_key, input_path, output_path="./Output"):
 
 if __name__ == "__main__":
     API_KEY = "5lhXjuq3PEKqgKnLEZW6"
-    INPUT_PATH = "C://Users//s6324//Desktop//volleyball_detect//StageIII//assets//event_detection.mp4"
-    OUTPUT_PATH = "C://Users//s6324//Desktop//volleyball_detect//StageIII//output"
+    INPUT_PATH = "./assets/event_detection.mp4"
+    OUTPUT_PATH = "./StageIII/output"
 
     processor = CourtProcessor(api_key=API_KEY)
 

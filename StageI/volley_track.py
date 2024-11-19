@@ -81,11 +81,11 @@ class VolleyBallTracker(Roboflow):
         if self.model_name == 'roboflow':
             #  API key, if doesn't work, refer -->
             #  https://github.com/shukkkur/VolleyVision/discussions/5#discussioncomment-7737081
-            rf = Roboflow(api_key="INSERT YOUR OWN API_KEY")
+            rf = Roboflow(api_key="5lhXjuq3PEKqgKnLEZW6")
             project = rf.workspace().project("volleyball-tracking")
             model = project.version(13).model
         elif self.model_name == 'yolov7':
-            model = custom(path_or_model='yV7-tiny/weights/best.pt')
+            model = custom(path_or_model='./yV7-tiny/weights/best.pt')
             model.conf = self.conf
 
         model = RoboYOLO(self.model_name, model, self.conf)
@@ -223,6 +223,6 @@ class VolleyBallTracker(Roboflow):
         ###################
         print(f'Done - {dt.seconds/60:.2f} minutes')
 
-test = VolleyBallTracker('C://Users//s6324//Desktop//volleyball_detect//StageI//assets//single_rally.mp4', 'C://Users//s6324//Desktop//volleyball_detect//StageI//VideoOutput//TrackVideo.mp4', 'yolov7', 0.4, False, 'circle', 'yellow', False)
+test = VolleyBallTracker('./assets/back_view.mp4', './VideoOutput/new_output.mp4', 'yolov7', 0.4, False, 'circle', 'yellow', False)
 test.ballTracker()
             
